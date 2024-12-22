@@ -9,6 +9,7 @@ function TodoList({ todos, toggleTodo, deleteTodo }) {
                     key={todo.id} 
                     todo={todo} 
                     toggleTodo={toggleTodo} 
+                    deleteTodo={deleteTodo} 
                 />
             ))}
         </div>
