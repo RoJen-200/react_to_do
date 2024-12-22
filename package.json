@@ -1,6 +1,6 @@
 {
-  "name": "todoapp",
-  "homepage": "https://rojen-200.github.io/react_to_do/",
+  "name": "react_to_do",
+  "homepage": "https://Rojen-200.github.io/react_to_do",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,7 +9,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npm run build && npm run build-gh-pages",
+    "build-gh-pages": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.3.1",
