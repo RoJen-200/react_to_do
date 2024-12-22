@@ -1,4 +1,3 @@
-// src/pages/TodoPage.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import TodoList from '../components/ToDoList';
@@ -33,6 +32,10 @@ function TodoPage() {
         setNewTodo('');
     };
 
+    const deleteTodo = (id) => {
+        setTodos(todos.filter(todo => todo.id !== id));
+    };
+
     const handleClick = () => {
         navigate('/dnd');
     }
@@ -49,7 +52,7 @@ function TodoPage() {
                 />
                 <button type="submit">Add</button>
             </form>
-            <TodoList todos={todos} toggleTodo={toggleTodo} />
+            <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
             <button onClick={handleClick}>Перейти на DND</button>
         </div>
     );
